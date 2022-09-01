@@ -34,8 +34,7 @@ ony essaye d'abord d'y accéder et ensuite fait appel au getteur, c'est accessi
 ble, il envoi !! #}
 <div class="metadata">Ecrit le {{ article.createdAt | date
 ('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Paysage</div><hr>
-{# createdAt est un objet DateTime donc il n'est pas possible de l'afficher tel quel, nous devons utiliser un filtre TWIG, qui va conver
-tir l'objet DateTime en une chaine de caractères #}
+{# createdAt est un objet DateTime donc il n'est pas possible de l'afficher tel quel, nous devons utiliser un filtre TWIG, qui va convertir l'objet DateTime en une chaine de caractères #}
 <div class="content">
 <img src="{{ article.image }}" class="w-100" alt=""><hr>
 
