@@ -9,15 +9,13 @@ riable de reception, qui receptionne un article par tour de boucle, la variabl
 es articles correspond à l'indice 'articles' du tableau ARRAY déclarée dans le
 controller BlogController.php dans la méthode index() #}
 
-<article class="col-md-4 mx-auto text-center border border-
-dark mb-3 p-3 mt-3 mr-1">
+<article class="col-md-4 mx-auto text-center border border-dark mb-3 p-3 mt-3 mr-1">
 
 <h2>{{ article.title }}</h2>
 {# synthaxe TWIG, la variable $title est privée, donc symf
 ony essaye d'abord d'y accéder et ensuite fait appel au getteur, c'est accessi
 ble, il envoi !! #}
-<div class="metadata">Ecrit le {{ article.createdAt | date
-('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</div><hr>
+<div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</div><hr>
 {# createdAt est un objet DateTime donc il n'est pas possi
 ble de l'afficher tel quel, nous devons utiliser un filtre TWIG, qui va conver
 tir l'objet DateTime en une chaine de caractères #}
@@ -29,8 +27,7 @@ tir l'objet DateTime en une chaine de caractères #}
 {# Sans le filtre, les balises <p> s'affichent, nous u
 tilisons donc un filtre 'raw' pour l'affichage brut #}
 
-<a href="{{ path('blog_show', {'id' : article.id }) }}" class="btn btn-
-primary">Lire la suite</a>
+<a href="{{ path('blog_show', {'id' : article.id }) }}" class="btn btn-primary">Lire la suite</a>
 
 </div>
 </article>

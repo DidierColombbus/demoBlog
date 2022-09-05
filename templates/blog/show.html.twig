@@ -2,13 +2,10 @@
 {% block body %}
 <section class="row articles">
 
-<article class="col-md-6 mx-auto text-center border border-dark mb-
-3 p-3 mt-3 mr-1">
+<article class="col-md-6 mx-auto text-center border border-dark mb-3 p-3 mt-3 mr-1">
 
 <h2>{{ article.title }}</h2>
-<div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y'
-) }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</di
-v><hr>
+<div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</div><hr>
 <div class="content">
 <img src="{{ article.image }}" alt=""><hr>
 {{ article.content | raw }}
