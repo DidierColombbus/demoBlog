@@ -45,4 +45,12 @@ class BlogController extends AbstractController
             'article' => $article
         ]);
     }
+
+    /**
+ * @Route("/blog/new", name="blog_create")
+ */
+ public function create()
+ {
+ $this->render('blog/create.html.twig');
+ }
 }
