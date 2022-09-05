@@ -1,24 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles{% endblock %}
+{% block title %}Bienvenue sur mon demoBlog{% endblock %}
 
 {% block body %}
-<section class="articles">
-<article>
-<h2>Bienvenue sur ma page d'articles</h2>
-<div class="metadata">Ecrit le 30/12/2019 à 14:44 dans la catégorie Paysage
-</div>
-<div class="content">
-<img src="" alt="">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nisi
-, accumsan id quam eget, pulvinar maximus libero. Donec eget sagittis nibh. Morbi auctor,
-augue non dignissim mattis, arcu eros ornare tellus, semper condimentum mauris metus ac ma
-ssa. Vestibulum a porta mi. </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque nisi
-, accumsan id quam eget, pulvinar maximus libero.</p>
-</div>
-</article>
-</section>
 {% for article in articles %}
 {# la variables article est déclaré au moment du for, c'est une va
 riable de reception, qui receptionne un article par tour de boucle, la variabl
@@ -33,10 +17,12 @@ dark mb-3 p-3 mt-3 mr-1">
 ony essaye d'abord d'y accéder et ensuite fait appel au getteur, c'est accessi
 ble, il envoi !! #}
 <div class="metadata">Ecrit le {{ article.createdAt | date
-('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Paysage</div><hr>
-{# createdAt est un objet DateTime donc il n'est pas possible de l'afficher tel quel, nous devons utiliser un filtre TWIG, qui va convertir l'objet DateTime en une chaine de caractères #}
+('d/m/Y') }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</div><hr>
+{# createdAt est un objet DateTime donc il n'est pas possi
+ble de l'afficher tel quel, nous devons utiliser un filtre TWIG, qui va conver
+tir l'objet DateTime en une chaine de caractères #}
 <div class="content">
-<img src="{{ article.image }}" class="w-100" alt=""><hr>
+<img src="{{ article.image }}" alt=""><hr>
 
 {{ article.content | raw }}
 
@@ -49,5 +35,4 @@ primary">Lire la suite</a>
 </div>
 </article>
 {% endfor %}
-
 {% endblock %}

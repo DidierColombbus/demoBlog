@@ -7,10 +7,10 @@
 
 <h2>{{ article.title }}</h2>
 <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y'
-) }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Politique</di
+) }} à {{ article.createdAt | date('H:i:s') }} dans la catégorie Articles</di
 v><hr>
 <div class="content">
-<img src="{{ article.image }}" class="w-100" alt=""><hr>
+<img src="{{ article.image }}" alt=""><hr>
 {{ article.content | raw }}
 </div>
 </article>
